@@ -26,6 +26,38 @@ body {
   background-color: #313131; /* vermelho puro */
 }
 
+.custom-dropdown {
+  position: relative;
+  font-family: Poppins, sans-serif;
+}
+
+.dropdown-selected {
+  font-size: 14px;
+}
+
+.dropdown-options {
+  max-height: 160px;
+  overflow-y: auto;
+  display: none;
+  background-color: #222;
+  border: 1px solid #8A2BE2;
+  border-radius: 5px;
+  color: white;
+  margin-top: 4px;
+  z-index: 10;
+}
+
+.dropdown-options div {
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  border-bottom: 1px solid #333;
+}
+
+.dropdown-options div:hover {
+  background-color: #8A2BE2;
+}
 .search-select select {
   background-color: #252525;         /* Cinza escuro */
   border: 2px solid #9d61ff;      /* Roxo Bolt */
@@ -680,6 +712,7 @@ Banner Style
 }
 
 .main-banner .item-1 {
+  margin-top: 10px;
   background-image: url(../images/banner1.png);
 }
 
