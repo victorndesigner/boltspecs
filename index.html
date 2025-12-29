@@ -1,259 +1,198 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-  <head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://boltspecs.bolttexturas.site/">
+  <meta property="og:site_name" content="bolttexturas">
+  <meta property="og:title" content="Bolt Texturas">
+  <meta property="og:description" content="O maior criador de texturas...">
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/victorndesigner/boltspecs/main/assets/images/icon.png">
+  <link rel="icon" type="image/png"
+    href="https://raw.githubusercontent.com/victorndesigner/boltspecs/main/assets/images/icon.png">
 
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:url" content="https://boltspecs.bolttexturas.site/">
-    <meta property="og:site_name" content="bolttexturas">
-    <meta property="og:title" content="Bolt Texturas">
-    <meta property="og:description" content="O maior criador de texturas...">
-    <meta property="og:image" content="https://raw.githubusercontent.com/victorndesigner/boltspecs/main/assets/images/icon.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="1200">
-    <meta property="og:image:alt" content="Banner Bolt Texturas">
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/victorndesigner/boltspecs/main/assets/images/icon.png">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/victorndesigner/boltspecs/main/assets/images/icon.png">
+  <title>Bolt Especializações</title>
 
-    <title>Bolt Especializações</title>
-
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-
-    <style>
-
-      .item-1 > .search-select {
-        margin-bottom: 15px;
-        text-align: center;
-      }
-
-      .item-1 > .search-select select {
-        max-width: 300px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 8px 12px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        font-size: 14px;
-      }
-    </style>
-
-  </head>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
 <body>
-
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <div class="dots"><span></span><span></span><span></span></div>
     </div>
   </div>
 
-  <header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-
-                    <a href="/" class="logo">
-                        <h1>bolt texturas</h1>
-                    </a>
-
-                    <ul class="nav">
-                      <li><a href="/" class="active">Inicio</a></li>
-                  </ul>
-
-                  <a class='menu-trigger'>
-                    <span>Menu</span>
-                </a>
-
-                </nav>
-            </div>
-        </div>
+  <header class="header-area">
+    <div class="container container-header">
+      <div class="header-left">
+        <img src="https://raw.githubusercontent.com/victorndesigner/boltspecs/main/assets/images/icon.png" alt="Logo"
+          class="logo-nav">
+        <span class="brand-nav"><span class="r-purple">bolt</span><span class="r-white">texturas</span></span>
+        <div class="divider-nav"></div>
+      </div>
+      <div class="header-right">
+        <a href="/" class="nav-btn-inicio active desktop-only">Início</a>
+        <button class="menu-mobile-trigger mobile-only" id="menuTrigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Menu Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="drawer-header">
+        <button class="close-drawer" id="closeDrawer">&times;</button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="/" class="mobile-nav-item active">Início</a>
+        <!-- Outros links podem ser adicionados aqui -->
+      </nav>
     </div>
   </header>
 
   <div class="main-banner" id="top">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-12 text-center">
-  
-          <div style="max-width: 300px; margin: 0 auto 20px auto; position: relative;">
-            <input type="text" id="filtroSelect" placeholder="Pesquisar..." style="width: 100%; padding: 8px 12px; border-radius: 5px; border: 1px solid #8A2BE2; font-size: 14px; background-color: #222; color: white; outline: none;">
-            <div id="listaPreview" style="display: none; background-color: #222; border: 1px solid #8A2BE2; border-radius: 5px; max-height: 140px; overflow-y: auto; position: absolute; top: 100%; left: 0; right: 0; z-index: 10;"></div>
+      <div class="header-text">
+        <h1>
+          <span class="r-purple">Bolt</span> <span class="r-white">Especializações</span>
+        </h1>
+        <div style="max-width: 300px; margin: 0 auto 20px auto; position: relative;">
+          <input type="text" id="filtroSelect" placeholder="Pesquisar...">
+          <div id="listaPreview"></div>
+        </div>
+
+        <div class="custom-dropdown">
+          <div id="dropdownToggle" class="dropdown-selected">Pesquisar mémeticas...</div>
+          <div id="dropdownOptions" class="dropdown-options">
+            <!-- Opções via JS -->
           </div>
-  
-          <div class="custom-dropdown" style="max-width: 300px; margin: 0 auto 30px auto;">
-            <div id="dropdownToggle" class="dropdown-selected" style="background-color: #222; color: white; border: 1px solid #8A2BE2; padding: 8px 12px; border-radius: 5px; cursor: pointer;">Pesquisar mémeticas...</div>
-            <div id="dropdownOptions" class="dropdown-options" style="display: none; background-color: #222; border: 1px solid #8A2BE2; border-radius: 5px; max-height: 200px; overflow-y: auto; position: absolute; width: 100%; z-index: 10;">
-              <!-- Opções via JS -->
-            </div>
-          </div>
-  
-          <div class="item item-1">
-            <div class="header-text">
-              <span class="category">bolt especializações</span>
-              <h2>Bolt Texturas</h2>
-              <p>O melhor que tá tendo!</p>
-            </div>
-          </div>
+        </div>
+
+        <div class="bg1-block">
+          <span class="category">o melhor que tá tendo</span>
+          <img src="assets/images/bg1.png" alt="Destaque Memorial">
         </div>
       </div>
     </div>
   </div>
-  
 
   <footer>
-    <div class="container">
-      <div class="col-lg-12">
-        <p>Copyright © 2028 Todos os direitos reservados. &nbsp;&nbsp;&nbsp; By: <a href="https://www.youtube.com/@bolttexturas" rel="nofollow" target="_blank">bolttexturas</a></p>
-      </div>
-    </div>
+    <p>By <a href="https://oncehuman.bolttexturas.site/" target="_blank">bolttexturas</a></p>
   </footer>
 
-<script>
-  const especializacoes = [
-    { text: "Broca", value: "/broca" },
-    { text: "Buff", value: "/buff" },
-    { text: "Cura", value: "/cura" },
-    { text: "Defesa", value: "/defesa" },
-    { text: "Desmontagem", value: "/desmontagem" },
-    { text: "Drone", value: "/drone" },
-    { text: "Equipamento", value: "/equipamento" },
-    { text: "Fabricação", value: "/fabricação" },
-    { text: "Faca", value: "/faca" },
-    { text: "Fogão", value: "/fogão" },
-    { text: "Fornalha", value: "/fornalha" },
-    { text: "Gerador", value: "/gerador" },
-    { text: "Instalação", value: "/instalação" },
-    { text: "Mochila", value: "/mochila" },
-    { text: "Pessoal", value: "/pessoal" },
-    { text: "Picareta", value: "/picareta" },
-    { text: "Primewar", value: "/primewar" },
-    { text: "Sentinela", value: "/sentinela" },
-    { text: "Suprimento", value: "/suprimento" }
-  ];
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const especializacoes = Object.keys(window.memeticasData).map(key => ({
+        text: window.memeticasData[key].title,
+        value: key
+      }));
 
-  const input = document.getElementById("filtroSelect");
-  const listaPreview = document.getElementById("listaPreview");
+      const input = document.getElementById("filtroSelect");
+      const listaPreview = document.getElementById("listaPreview");
+      const toggle = document.getElementById("dropdownToggle");
+      const optionsBox = document.getElementById("dropdownOptions");
 
-  input.addEventListener("input", function () {
-    const termo = input.value.toLowerCase();
-    listaPreview.innerHTML = "";
+      // Filter functionality
+      input.addEventListener("input", function () {
+        const termo = input.value.toLowerCase();
+        listaPreview.innerHTML = "";
 
-    if (termo === "") {
-      listaPreview.style.display = "none";
-      return;
-    }
+        if (termo === "") {
+          listaPreview.style.display = "none";
+          return;
+        }
 
-    const filtradas = especializacoes.filter(e => e.text.toLowerCase().includes(termo));
-    if (filtradas.length === 0) {
-      const vazio = document.createElement("div");
-      vazio.textContent = "Nenhum resultado encontrado";
-      vazio.style.padding = "10px";
-      vazio.style.color = "#ccc";
-      listaPreview.appendChild(vazio);
-    } else {
-      filtradas.forEach(e => {
-        const opt = document.createElement("div");
-        opt.textContent = e.text;
-        opt.style.padding = "10px";
-        opt.style.cursor = "pointer";
-        opt.style.color = "white";
-        opt.style.fontSize = "14px";
-        opt.style.borderBottom = "1px solid #333";
-        opt.addEventListener("mouseover", () => opt.style.backgroundColor = "#8A2BE2");
-        opt.addEventListener("mouseout", () => opt.style.backgroundColor = "#222");
-        opt.onclick = () => {
-          window.location.href = e.value;
-        };
-        listaPreview.appendChild(opt);
+        const filtradas = especializacoes.filter(e => e.text.toLowerCase().includes(termo));
+        if (filtradas.length === 0) {
+          const vazio = document.createElement("div");
+          vazio.textContent = "Nenhum resultado encontrado";
+          vazio.style.padding = "10px";
+          vazio.style.color = "#ccc";
+          listaPreview.appendChild(vazio);
+        } else {
+          filtradas.forEach(e => {
+            const opt = document.createElement("div");
+            opt.textContent = e.text;
+            opt.onclick = () => {
+              window.location.href = `item.html?target=${e.value}`;
+            };
+            listaPreview.appendChild(opt);
+          });
+        }
+        listaPreview.style.display = "block";
       });
-    }
 
-    listaPreview.style.display = "block";
-  });
+      // Dropdown functionality
+      especializacoes.forEach(item => {
+        const div = document.createElement("div");
+        div.textContent = item.text;
+        div.onclick = () => {
+          window.location.href = `item.html?target=${item.value}`;
+        };
+        optionsBox.appendChild(div);
+      });
 
-  // Clicar fora esconde a lista
-  document.addEventListener("click", function (e) {
-    if (!input.contains(e.target) && !listaPreview.contains(e.target)) {
-      listaPreview.style.display = "none";
-    }
-  });
+      toggle.addEventListener("click", () => {
+        optionsBox.style.display = optionsBox.style.display === "block" ? "none" : "block";
+      });
 
-  // Select manual continua funcionando
-  document.getElementById("pageSelector").addEventListener("change", function () {
-    if (this.value) window.location.href = this.value;
-  });
-</script>
+      // Click outside to close
+      document.addEventListener("click", function (e) {
+        if (!input.contains(e.target) && !listaPreview.contains(e.target)) {
+          listaPreview.style.display = "none";
+        }
+        if (!toggle.contains(e.target) && !optionsBox.contains(e.target)) {
+          optionsBox.style.display = "none";
+        }
+      });
 
-<script>
-  const dropdownData = [
-    { text: "Broca", value: "/broca" },
-    { text: "Buff", value: "/buff" },
-    { text: "Cura", value: "/cura" },
-    { text: "Defesa", value: "/defesa" },
-    { text: "Desmontagem", value: "/desmontagem" },
-    { text: "Drone", value: "/drone" },
-    { text: "Equipamento", value: "/equipamento" },
-    { text: "Fabricação", value: "/fabricação" },
-    { text: "Faca", value: "/faca" },
-    { text: "Fogão", value: "/fogão" },
-    { text: "Fornalha", value: "/fornalha" },
-    { text: "Gerador", value: "/gerador" },
-    { text: "Instalação", value: "/instalação" },
-    { text: "Mochila", value: "/mochila" },
-    { text: "Pessoal", value: "/pessoal" },
-    { text: "Picareta", value: "/picareta" },
-    { text: "Primewar", value: "/primewar" },
-    { text: "Sentinela", value: "/sentinela" },
-    { text: "Suprimento", value: "/suprimento" }
-  ];
+      // Menu Mobile Toggle
+      const menuTrigger = document.getElementById("menuTrigger");
+      const mobileDrawer = document.getElementById("mobileDrawer");
+      const closeDrawer = document.getElementById("closeDrawer");
 
-  const toggle = document.getElementById("dropdownToggle");
-  const optionsBox = document.getElementById("dropdownOptions");
+      function toggleMenu() {
+        menuTrigger.classList.toggle("active");
+        mobileDrawer.classList.toggle("active");
+        document.body.classList.toggle("menu-open");
+      }
 
-  dropdownData.forEach(item => {
-    const div = document.createElement("div");
-    div.textContent = item.text;
-    div.onclick = () => {
-      toggle.textContent = item.text;
-      optionsBox.style.display = "none";
-      window.location.href = item.value;
-    };
-    optionsBox.appendChild(div);
-  });
+      function closeMenu() {
+        menuTrigger.classList.remove("active");
+        mobileDrawer.classList.remove("active");
+        document.body.classList.remove("menu-open");
+      }
 
-  toggle.addEventListener("click", () => {
-    optionsBox.style.display = optionsBox.style.display === "block" ? "none" : "block";
-  });
+      menuTrigger.addEventListener("click", toggleMenu);
+      closeDrawer.addEventListener("click", closeMenu);
 
-  document.addEventListener("click", function (e) {
-    if (!toggle.contains(e.target) && !optionsBox.contains(e.target)) {
-      optionsBox.style.display = "none";
-    }
-  });
-</script>
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+      // Fechar ao clicar fora do menu
+      document.addEventListener("click", function (e) {
+        if (mobileDrawer.classList.contains("active") &&
+          !mobileDrawer.contains(e.target) &&
+          !menuTrigger.contains(e.target)) {
+          closeMenu();
+        }
+      });
 
+      // Hide preloader
+      setTimeout(() => {
+        document.getElementById('js-preloader').classList.add('loaded');
+      }, 500);
+    });
+  </script>
 </body>
+
 </html>

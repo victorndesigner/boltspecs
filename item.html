@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://boltspecs.bolttexturas.site/">
+    <meta property="og:site_name" content="bolttexturas">
+    <meta property="og:title" content="Bolt Texturas">
+    <meta property="og:description" content="O maior criador de texturas...">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/victorndesigner/boltspecs/main/assets/images/icon.png">
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/victorndesigner/boltspecs/main/assets/images/icon.png">
+    <title>Bolt Especializações</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots"><span></span><span></span><span></span></div>
+        </div>
+    </div>
+
+    <header class="header-area">
+        <div class="container container-header">
+            <div class="header-left">
+                <img src="https://raw.githubusercontent.com/victorndesigner/boltspecs/main/assets/images/icon.png"
+                    alt="Logo" class="logo-nav">
+                <span class="brand-nav"><span class="r-purple">bolt</span><span class="r-white">texturas</span></span>
+                <div class="divider-nav"></div>
+            </div>
+            <div class="header-right">
+                <a href="/" class="nav-btn-inicio desktop-only">Início</a>
+                <button class="menu-mobile-trigger mobile-only" id="menuTrigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <!-- Menu Mobile Drawer -->
+        <div class="mobile-drawer" id="mobileDrawer">
+            <div class="drawer-header">
+                <button class="close-drawer" id="closeDrawer">&times;</button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="/" class="mobile-nav-item">Início</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Logo removida conforme pedido -->
+
+    <div class="item-page">
+        <h1 id="page-title">...</h1>
+
+        <p id="contador-specs">
+            Quantidade: <span id="qtd-specs">0</span>
+        </p>
+
+        <div class="swiper-master">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper" id="image-wrapper">
+                    <!-- Imagens injetadas via JS -->
+                </div>
+            </div>
+
+            <div class="swiper-navigation-custom">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>By <a href="https://oncehuman.bolttexturas.site/" target="_blank">bolttexturas</a></p>
+    </footer>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const target = urlParams.get('target');
+
+            if (!target || !window.memeticasData[target]) {
+                window.location.href = '/';
+                return;
+            }
+
+            const data = window.memeticasData[target];
+            document.title = `Bolt Especializações - ${data.title}`;
+            document.getElementById('page-title').innerHTML = `<span class="r-purple">Specs</span> <span class="r-white">${data.title}</span>`;
+
+            const wrapper = document.getElementById('image-wrapper');
+            data.images.forEach(imgSrc => {
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `<img src="${imgSrc}" alt="${data.title}">`;
+                wrapper.appendChild(slide);
+            });
+
+            document.getElementById('qtd-specs').textContent = data.images.length;
+
+            const swiperConfig = {
+                loop: data.images.length > 1,
+                grabCursor: true,
+                spaceBetween: 30,
+                slidesPerView: 1,
+                centeredSlides: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                }
+            };
+
+            if (data.images.length <= 1) {
+                const nav = document.querySelector('.swiper-navigation-custom');
+                if (nav) nav.style.display = 'none';
+            }
+
+            new Swiper('.mySwiper', swiperConfig);
+
+            // Menu Mobile Toggle
+            const menuTrigger = document.getElementById("menuTrigger");
+            const mobileDrawer = document.getElementById("mobileDrawer");
+            const closeDrawer = document.getElementById("closeDrawer");
+
+            function toggleMenu() {
+                menuTrigger.classList.toggle("active");
+                mobileDrawer.classList.toggle("active");
+                document.body.classList.toggle("menu-open");
+            }
+
+            function closeMenu() {
+                menuTrigger.classList.remove("active");
+                mobileDrawer.classList.remove("active");
+                document.body.classList.remove("menu-open");
+            }
+
+            menuTrigger.addEventListener("click", toggleMenu);
+            closeDrawer.addEventListener("click", closeMenu);
+
+            // Fechar ao clicar fora
+            document.addEventListener("click", function (e) {
+                if (mobileDrawer.classList.contains("active") &&
+                    !mobileDrawer.contains(e.target) &&
+                    !menuTrigger.contains(e.target)) {
+                    closeMenu();
+                }
+            });
+
+            // Hide preloader
+            setTimeout(() => {
+                document.getElementById('js-preloader').classList.add('loaded');
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>
