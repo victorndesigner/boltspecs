@@ -7,22 +7,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:url" content="https://boltspecs.bolttexturas.site/">
-  <meta property="og:site_name" content="bolttexturas">
-  <meta property="og:title" content="Bolt Texturas">
-  <meta property="og:description" content="Raridade das meméticas • bolttexturas">
-  <meta property="og:image"
-    content="https://raw.githubusercontent.com/victorndesigner/boltspecs/main/assets/images/icon.png">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="1200">
-  <meta property="og:image:alt" content="Banner Bolt Texturas">
-  <link rel="icon" type="image/png"
-    href="https://raw.githubusercontent.com/victorndesigner/boltspecs/main/assets/images/icon.png">
-  <meta name="twitter:image"
-    content="https://raw.githubusercontent.com/victorndesigner/boltspecs/main/assets/images/icon.png">
+  <meta property="og:title" content="Bolt Texturas" />
+  <meta property="og:description" content="O maior criador de texturas está no Once • Human!" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/victorndesigner/oncehuman/main/img/icon.png" />
+  <meta property="og:url" content="https://boltspecs.bolttexturas.site/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="bolttexturas" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:image:alt" content="Banner Bolt Texturas" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="1200" />
+  <meta name="twitter:description" content="O maior criador de texturas está no Once • Human!" />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/victorndesigner/oncehuman/main/img/icon.png" />
+  <meta name="theme-color" content="#8c00ff" />
   <title>Raridade das meméticas • bolttexturas</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -38,7 +35,7 @@
   <header class="header-area">
     <div class="container container-header">
       <div class="header-left">
-        <img src="https://raw.githubusercontent.com/victorndesigner/boltspecs/main/assets/images/icon.png" alt="Logo"
+        <img src="https://raw.githubusercontent.com/victorndesigner/oncehuman/main/img/icon.png" alt="Logo"
           class="logo-nav">
         <span class="brand-nav"><span class="r-purple">bolt</span><span class="r-white">texturas</span></span>
         <div class="divider-nav"></div>
@@ -130,7 +127,7 @@
             const opt = document.createElement("div");
             opt.textContent = e.text;
             opt.onclick = () => {
-              window.location.href = `item.html?target=${e.value}`;
+              window.location.href = `/item?target=${e.value}`;
             };
             listaPreview.appendChild(opt);
           });
@@ -143,7 +140,7 @@
         const div = document.createElement("div");
         div.textContent = item.text;
         div.onclick = () => {
-          window.location.href = `item.html?target=${item.value}`;
+          window.location.href = `/item?target=${item.value}`;
         };
         optionsBox.appendChild(div);
       });
